@@ -28,145 +28,114 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tableLayoutPanel1 = new TableLayoutPanel();
-            pictureBox1 = new PictureBox();
-            checkBox1 = new CheckBox();
-            flowLayoutPanel1 = new FlowLayoutPanel();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
             openFileDialog1 = new OpenFileDialog();
             colorDialog1 = new ColorDialog();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            menuStrip1 = new MenuStrip();
+            inicoToolStripMenuItem = new ToolStripMenuItem();
+            negociosToolStripMenuItem = new ToolStripMenuItem();
+            agregarNuevoToolStripMenuItem = new ToolStripMenuItem();
+            eliminarToolStripMenuItem = new ToolStripMenuItem();
+            salirToolStripMenuItem = new ToolStripMenuItem();
             tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            flowLayoutPanel1.SuspendLayout();
+            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
             tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 90F));
-            tableLayoutPanel1.Controls.Add(pictureBox1, 0, 0);
-            tableLayoutPanel1.Controls.Add(checkBox1, 0, 1);
-            tableLayoutPanel1.Controls.Add(flowLayoutPanel1, 1, 1);
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel1.Controls.Add(menuStrip1, 0, 0);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 90F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 10F));
-            tableLayoutPanel1.Size = new Size(1039, 730);
+            tableLayoutPanel1.Size = new Size(1392, 730);
             tableLayoutPanel1.TabIndex = 0;
             // 
-            // pictureBox1
+            // menuStrip1
             // 
-            tableLayoutPanel1.SetColumnSpan(pictureBox1, 2);
-            pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Location = new Point(3, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1033, 651);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            menuStrip1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            menuStrip1.BackColor = SystemColors.AppWorkspace;
+            tableLayoutPanel1.SetColumnSpan(menuStrip1, 2);
+            menuStrip1.Dock = DockStyle.None;
+            menuStrip1.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            menuStrip1.GripStyle = ToolStripGripStyle.Visible;
+            menuStrip1.Items.AddRange(new ToolStripItem[] { inicoToolStripMenuItem, negociosToolStripMenuItem, salirToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.RenderMode = ToolStripRenderMode.System;
+            menuStrip1.Size = new Size(1392, 27);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
             // 
-            // checkBox1
+            // inicoToolStripMenuItem
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(3, 660);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(63, 19);
-            checkBox1.TabIndex = 1;
-            checkBox1.Text = "Ajustar";
-            checkBox1.UseVisualStyleBackColor = true;
-            checkBox1.CheckedChanged += checkBox1_CheckedChanged;
+            inicoToolStripMenuItem.Name = "inicoToolStripMenuItem";
+            inicoToolStripMenuItem.Size = new Size(53, 23);
+            inicoToolStripMenuItem.Text = "Inico";
+            inicoToolStripMenuItem.Click += inicoToolStripMenuItem_Click;
             // 
-            // flowLayoutPanel1
+            // negociosToolStripMenuItem
             // 
-            flowLayoutPanel1.Controls.Add(button1);
-            flowLayoutPanel1.Controls.Add(button2);
-            flowLayoutPanel1.Controls.Add(button3);
-            flowLayoutPanel1.Controls.Add(button4);
-            flowLayoutPanel1.Dock = DockStyle.Fill;
-            flowLayoutPanel1.FlowDirection = FlowDirection.RightToLeft;
-            flowLayoutPanel1.Location = new Point(106, 660);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(930, 67);
-            flowLayoutPanel1.TabIndex = 2;
+            negociosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { agregarNuevoToolStripMenuItem, eliminarToolStripMenuItem });
+            negociosToolStripMenuItem.Name = "negociosToolStripMenuItem";
+            negociosToolStripMenuItem.Size = new Size(84, 23);
+            negociosToolStripMenuItem.Text = "Negocios";
+            negociosToolStripMenuItem.Click += negociosToolStripMenuItem_Click;
             // 
-            // button1
+            // agregarNuevoToolStripMenuItem
             // 
-            button1.Location = new Point(852, 3);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "Mostrar imagen";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click_1;
+            agregarNuevoToolStripMenuItem.Name = "agregarNuevoToolStripMenuItem";
+            agregarNuevoToolStripMenuItem.Size = new Size(180, 24);
+            agregarNuevoToolStripMenuItem.Text = "Agregar nuevo";
+            agregarNuevoToolStripMenuItem.Click += agregarNuevoToolStripMenuItem_Click_1;
             // 
-            // button2
+            // eliminarToolStripMenuItem
             // 
-            button2.Location = new Point(771, 3);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 1;
-            button2.Text = "Borrar imagen";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            eliminarToolStripMenuItem.Name = "eliminarToolStripMenuItem";
+            eliminarToolStripMenuItem.Size = new Size(180, 24);
+            eliminarToolStripMenuItem.Text = "Eliminar";
+            eliminarToolStripMenuItem.Click += eliminarToolStripMenuItem_Click;
             // 
-            // button3
+            // salirToolStripMenuItem
             // 
-            button3.Location = new Point(690, 3);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 2;
-            button3.Text = "Fondo";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(609, 3);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 3;
-            button4.Text = "Cerrar";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
-            // 
-            // openFileDialog1
-            // 
-            openFileDialog1.FileName = "openFileDialog1";
-            openFileDialog1.Filter = "JPEG Files (*.jpg)|*.jpg|PNG Files (*.png)|*.png|BMP Files (*.bmp)|*.bmp|All files (*.*)|*.*";
-            openFileDialog1.Title = "Seleccione Imagen";
-            openFileDialog1.FileOk += openFileDialog1_FileOk;
+            salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            salirToolStripMenuItem.Size = new Size(51, 23);
+            salirToolStripMenuItem.Text = "Salir";
+            salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1039, 730);
+            BackgroundImage = Properties.Resources.adaptive_icon2;
+            BackgroundImageLayout = ImageLayout.Center;
+            ClientSize = new Size(1392, 730);
             Controls.Add(tableLayoutPanel1);
+            DoubleBuffered = true;
+            MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "Ciudad Quetzal Manager";
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            flowLayoutPanel1.ResumeLayout(false);
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private TableLayoutPanel tableLayoutPanel1;
-        private PictureBox pictureBox1;
-        private CheckBox checkBox1;
-        private FlowLayoutPanel flowLayoutPanel1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
         private OpenFileDialog openFileDialog1;
         private ColorDialog colorDialog1;
+        private TableLayoutPanel tableLayoutPanel1;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem inicoToolStripMenuItem;
+        private ToolStripMenuItem negociosToolStripMenuItem;
+        private ToolStripMenuItem agregarNuevoToolStripMenuItem;
+        private ToolStripMenuItem eliminarToolStripMenuItem;
+        private ToolStripMenuItem salirToolStripMenuItem;
     }
 }
