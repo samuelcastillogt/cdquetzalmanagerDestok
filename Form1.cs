@@ -5,6 +5,15 @@ namespace CduetzalDestok
         public Form1()
         {
             InitializeComponent();
+            try
+            {
+                int nummm = new APIService().GetCount();
+                label1.Text = $"El numero de negocios registrados es {nummm}";
+            }
+            catch
+            {
+                MessageBox.Show("ERRR");
+            };
         }
 
 
@@ -12,6 +21,7 @@ namespace CduetzalDestok
 
         private void inicoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
 
         }
 
@@ -35,6 +45,16 @@ namespace CduetzalDestok
         {
             Form fDelete = new Form2();
             fDelete.ShowDialog();
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
